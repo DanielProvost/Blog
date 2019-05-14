@@ -1,0 +1,56 @@
+<!DOCTYPE HTML>
+<html lang='fr'>
+<head>
+	<title>Blog</title>
+	<meta charset='utf-8'>
+	<link rel='stylesheet' href='views/main1.css'/>
+</head>
+<body>
+	
+	
+	<section>
+		<h2>Register !</h2>
+		<?php if(isset($error)):?>
+			<p class='error'>
+			<?= $error;?>
+			</p>
+			<?php endif; ?>
+		<form method='POST' action ='index.php?p=signup'>
+
+		<label for='email'>Email</label>
+		<input type='email' name='email' id='email' <?php if(isset($email)){ echo 'value="'.$email.'"';}?>>
+			
+		<label for='password'>Password</label>
+		<input type='password' name='password' id='password'>
+	
+		<label for='firstname'>Firstname</label>
+		<input type='texte' name='firstname' id ='firstname' <?php if(isset($firstname)){ echo 'value="'.$firstname.'"';}?>>
+		
+		<label for='lastname'>Lastname</label>
+		<input type='texte' name = 'lastname' id ='lastname' <?php if(isset($lastname)){ echo 'value="'.$lastname.'"';}?>>
+		
+		<label for='birthdate'>Birthdate</label>
+		<input type='date' name = 'birthdate' id = 'birthdate' <?php if(isset($birthdate)){ echo 'value="'.$birthdate.'"';}?>>
+		
+		<label for='adress'>Adress</label>
+		<input type='texte' name = 'adress' id = 'adress' <?php if(isset($adress)){ echo 'value="'.$adress.'"';}?>>
+		
+		<label for='zipcode'>Zipcode<label>
+		<input type='number' name = 'zipcode' id = 'zipcode' <?php if(isset($zipcode)){ echo 'value="'.$zipcode.'"';}?>>
+	
+		<label for='city'>City</label>
+		<input type='texte' name = 'city' id = 'city' <?php if(isset($city)){ echo 'value="'.$city.'"';}?>>
+		
+		<label for='gender_M'>Monsieur</label>
+		<input type='radio' name = 'gender' id = 'gender_M' value='M.' <?php if(isset($gender) && $gender == 'M.'){ echo 'checked="checked"';}?>>
+		<label for='gender_MM'>Madame</label>
+		<input type='radio' name = 'gender' id = 'gender_MM' value='MM' <?php if(isset($gender) && $gender == 'MM'){ echo 'checked="checked"';}?>>	
+		
+		
+		<input type='submit' name='valider' id= 'valider'>
+		
+	</form>
+	</section>
+
+</body>
+</html>

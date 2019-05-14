@@ -1,0 +1,68 @@
+
+	
+	<?php if($fb->hasMessages()):?>
+	<ul id='toHide'>
+		<?php while($message=$fb->fetch()):?>
+			<li><?= $message;?></li>
+		<?php endwhile; ?>
+	</ul>
+	<script>
+	
+	setTimeout(function(){
+		let ul = document.getElementById('toHide')
+		ul.style.display = 'none';},3000)
+	
+	</script>
+	<?php endif; ?>
+	
+	<ul>
+		
+		<?php foreach($posts as $post){ ?>
+		
+			<li>
+				<article>
+					<h3>
+						<?php echo $post['Title']; ?>	
+					</h3>
+					<small>
+						<?= (new DateTime($post['CreatedAt']))->format('d/m/Y/ H:i:s'); ?>
+					</small></br>
+					<small class='blue'>
+						<?php echo $post['Name']; ?>
+					</small>
+					<p>
+						<?php	echo substr($post['Content'],0,150); ?>
+						[...]
+					</p>
+					<a href='index.php?p=post&postId=<?=$post['Id'];?>'>Lire la suite
+					</a>
+					
+					
+				</article>
+			</li>
+					
+		<?php } ?>	
+	</ul>
+	
+		
+   
+
+					
+					
+					
+					
+	
+	
+		
+
+
+	
+
+
+
+
+	
+
+	
+	
+	

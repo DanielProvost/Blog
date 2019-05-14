@@ -1,0 +1,83 @@
+html{
+	width:600px;
+	height:auto;
+	margin:0 auto;
+}
+header>p{
+	text-align:center;
+	margin:0 auto;
+}
+header{
+	margin-bottom:5%;
+}
+#toHide li{
+	margin-left:35%;
+	color : green;
+	font-size:1.2em;
+}
+ul{
+	padding:0;
+}
+h1,
+h2,
+h3{
+	text-align:center;
+}
+li{
+	list-style-type:none;
+}
+h1{
+	margin-bottom:5%;
+}
+h3{
+	color:red;
+}
+p{
+	width:300px;
+	text-align:justify;
+}
+
+article{
+	width:300px;
+	margin:0 auto;
+}
+
+article img{
+	width:300px;
+	height:200px;
+}
+.blue{
+	color:blue;
+}
+#form{
+	width:300px;
+	margin:0 auto;
+}
+#nickname{
+	margin-left:16%;
+}
+#form{
+	margin:0 auto;
+}
+#form input{
+	margin-top: 5%;
+	margin-bottom:5%;
+}
+#form input:last-child{
+	margin-left :35%;
+	
+}
+#form1{
+	border:1px solid black;
+}
+#form1 p{
+	margin-left:5%;
+}
+
+
+	
+	
+	
+	
+	
+

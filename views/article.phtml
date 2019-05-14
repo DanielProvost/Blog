@@ -1,0 +1,63 @@
+
+	
+		<ul>
+			
+			<li>
+				<article>
+					<h3>
+						<?php echo $post['Title']; ?>	
+					</h3>
+					<small>
+						<?php	echo $post['CreatedAt']; ?>
+					</small>
+					<small class='blue'>
+						<?php	echo $post['Name']; ?>
+					</small>
+					
+					<p>
+						<?php	echo $post['Content']; ?>
+					
+					</p>
+					<?php if(!empty($post['Image'])){ ?>
+					
+					<img src='image/
+						<?php  echo $post['Image']; ?>' alt=''/>
+						
+					<?php } ?>
+										
+				</article>
+			</li>
+							
+		</ul>
+		
+		<div id='form'>
+			<h3>Commentaires</h3>
+			
+			<form method='POST' action ='index.php?p=addComment&postId=<?= $id ;?>'>
+			<label for='nickname'>Pseudo</label>
+			<input type='text' name='nickname' Id='nickname'>
+			</br>
+			<label for='content'>Commentaires</label>
+			<textarea id='content' name='content'></textarea>
+			<input type='submit' value='valider'>
+			</form>
+			
+			<h3>Affichage commentaires</h3>
+			
+				<p>
+				<?php foreach($comments as $comment){ ?>
+				<div id='form1'>
+				<p><em><strong>Pseudo :</em></strong>
+					<?php	echo $comment['Nickname']; ?>
+				</p>
+				<p><em><strong>Commentaire :</em></br></strong>
+					<?php	echo $comment['Content']; ?>
+				</p>
+				<small>
+						<p>Posté le <?= (new DateTime($comment['CreatedAt']))->format('d/m/Y/ H:i:s'); ?>
+				</small></br>
+				</div>
+				<?php } ?>	
+				</p>			
+		</div>
+	
